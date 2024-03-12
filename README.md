@@ -32,6 +32,6 @@ factory method. после этого появляется возможност�
 возможна отмена любой операции между банками. переведенная сумма возвращается отправителю,
 запись о переводе в таблицу CENTRAL_BANK_OPERATIONS удаляется.(отменить транзацию может только отправитель)
 
-![image info] (images/open.png)
-![image info] (images/registr.png)
-![image info] (images/use_case.jpg)
+![image info] (https://gitlab.akhcheck.ru/svyatoslav.ryazanov/project_tp_ryazanov/-/tree/checkpoint_1/images/open.png)
+![image info] (https://gitlab.akhcheck.ru/svyatoslav.ryazanov/project_tp_ryazanov/-/tree/checkpoint_1/images/registr.png)
+![image info] (https://gitlab.akhcheck.ru/svyatoslav.ryazanov/project_tp_ryazanov/-/tree/checkpoint_1/images/use_case.jpg)
