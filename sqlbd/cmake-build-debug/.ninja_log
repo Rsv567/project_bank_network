@@ -1,0 +1,18 @@
+# ninja log v5
+2	1124	1713137093275117512	CMakeFiles/BankSystem.dir/main.cpp.o	f30482fd527b7409
+3	1276	1713137093427121764	src/CMakeFiles/libraries.dir/AccountOpening.cpp.o	38a3631baa60245e
+3	1324	1713137093471122994	src/CMakeFiles/libraries.dir/bank_transfer.cpp.o	2a79407a4dd4b928
+1277	2328	1713137094475151082	src/CMakeFiles/libraries.dir/SQLStatement.cpp.o	d0c406fe54d98f06
+1126	2364	1713137094511152090	src/CMakeFiles/libraries.dir/Registration.cpp.o	5a120da4d22b1f64
+1324	2706	1713137094855161716	src/CMakeFiles/libraries.dir/StateClient.cpp.o	94c697fd92cd2c56
+2328	3245	1713137095395176830	src/CMakeFiles/libraries.dir/create_data_base.cpp.o	48d9292d827ba0ea
+3245	3411	1713137095559181421	/home/rsv567/sqlbd/lib/liblibraries.so	bdbb2eea975e87ba
+2364	11768	1713137103907415530	libraries/CMakeFiles/sql.dir/sqlite3.c.o	fe184a076ea8bc69
+11768	11841	1713137103991417890	/home/rsv567/sqlbd/lib/libsql.so	770417e32301d44c
+11841	11984	1713137104131421823	BankSystem	28faf609c17cfbe7
+9	886	1713137361310977011	src/CMakeFiles/libraries.dir/SQLStatement.cpp.o	d0c406fe54d98f06
+887	1063	1713137361482982251	/home/rsv567/sqlbd/lib/liblibraries.so	bdbb2eea975e87ba
+1063	1276	1713137361698988831	BankSystem	28faf609c17cfbe7
+6	868	1713137555229001928	src/CMakeFiles/libraries.dir/bank_transfer.cpp.o	2a79407a4dd4b928
+868	1028	1713137555389006985	/home/rsv567/sqlbd/lib/liblibraries.so	bdbb2eea975e87ba
+1028	1190	1713137555549012042	BankSystem	28faf609c17cfbe7

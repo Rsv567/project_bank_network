@@ -12,7 +12,7 @@ static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
 void SqlStatement(char *sql) {
   sqlite3 *db;
   char *zErrMsg = nullptr;
-  int rc = sqlite3_open("h.db", &db);
+  int rc = sqlite3_open("test.db", &db);
   if(rc !=SQLITE_OK){
     std::cout<<"Невозможно открыть базу данных\n"<< sqlite3_errmsg(db);
     sqlite3_free(zErrMsg);
@@ -49,6 +49,7 @@ std::string GetValueFromDatabase(const char *dbName,
   rc = sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr);
   if (rc != SQLITE_OK) {
     std::cerr << "SQL error: " << sqlite3_errmsg(db) << std::endl;
+    std::cout<<fieldName<<" "<<tableName<<" "<<condition<<"\n";
     return "";
   }
 

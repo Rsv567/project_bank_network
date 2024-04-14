@@ -3,8 +3,8 @@
 #include "SQLconst.h"
 
 std::string GetIdValueByName(std::string name, std::string bank) {
-  std::string condition = name;
-  condition += name + "'";
+  std::string condition = "'" + name;
+  condition += "'";
   InputData *input_data = new SQLInput("ID", bank, condition);
   std::string data;
   input_data->input(data);
