@@ -13,11 +13,17 @@ void SqlStatement(char *sql) {
   sqlite3 *db;
   char *zErrMsg = nullptr;
   int rc = sqlite3_open("h.db", &db);
-  if(rc){std::cout<<"vce est";}
-  else{std::cout<<"net";
+  if(rc !=SQLITE_OK){
+    std::cout<<"Невозможно открыть базу данных\n"<< sqlite3_errmsg(db);
+    sqlite3_free(zErrMsg);
+    sqlite3_close(db);
+    return;
   }
   
-  sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+  rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+  if(rc != SQLITE_OK){
+    std::cout<<"Невозможно запустить statement"<<zErrMsg;
+    }
   sqlite3_free(zErrMsg);
   sqlite3_close(db);
 }
