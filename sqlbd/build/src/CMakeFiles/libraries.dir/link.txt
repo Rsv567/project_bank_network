@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,liblibraries.so -o ../../lib/liblibraries.so CMakeFiles/libraries.dir/AccountOpening.cpp.o CMakeFiles/libraries.dir/bank_transfer.cpp.o CMakeFiles/libraries.dir/Registration.cpp.o CMakeFiles/libraries.dir/SQLStatement.cpp.o CMakeFiles/libraries.dir/StateClient.cpp.o CMakeFiles/libraries.dir/create_data_base.cpp.o 
