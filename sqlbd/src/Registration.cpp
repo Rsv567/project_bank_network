@@ -61,26 +61,25 @@ void CreaterPhysicalPerson::WriteID() {
 
 }
 void CreaterPhysicalPerson::WriteName() {
-
-  std::getline(std::cin, physical_client_->name);
+  std::unique_ptr<InputData> out_data(new GraphicsInput("write_name"));
+  out_data->input(physical_client_->name);
 
 }
 void CreaterPhysicalPerson::WriteLegalSubject(std::string legal_subject) {
-
   physical_client_->legal_subject = legal_subject;
 }
 void CreaterPhysicalPerson::WriteBirthDayDate() {
-
-  std::getline(std::cin, physical_client_->birthday_date);
+  std::unique_ptr<InputData> out_data(new GraphicsInput("write_birth"));
+  out_data->input(physical_client_->birthday_date);
 }
 void CreaterPhysicalPerson::WriteAddress() {
-
-  std::getline(std::cin, physical_client_->address);
+  std::unique_ptr<InputData> out_data(new GraphicsInput("write_address"));
+  out_data->input( physical_client_->address);
 
 }
 void CreaterPhysicalPerson::WritePassport() {
-
-  std::getline(std::cin, physical_client_->passport);
+  std::unique_ptr<InputData> out_data(new GraphicsInput("write_passport"));
+  out_data->input( physical_client_->passport);
 
 }
 

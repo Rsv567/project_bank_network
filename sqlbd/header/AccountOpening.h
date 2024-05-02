@@ -1,5 +1,6 @@
 #ifndef SQLBD__ACCOUNTOPENING_H_
 #define SQLBD__ACCOUNTOPENING_H_
+#include <memory>
 #include "SQLStatement.h"
 #include "InputOutputData.h"
 #include "SQLconst.h"

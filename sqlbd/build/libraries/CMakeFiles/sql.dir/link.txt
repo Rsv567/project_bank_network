@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -shared -Wl,-soname,libsql.so -o ../../lib/libsql.so CMakeFiles/sql.dir/sqlite3.c.o 

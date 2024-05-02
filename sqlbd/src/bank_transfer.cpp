@@ -3,7 +3,7 @@
 #include "SQLconst.h"
 
 std::string GetIdValueByName(std::string name, std::string bank) {
-  std::string condition = "'" + name;
+  std::string condition = "Name = '" + name;
   condition += "'";
   InputData *input_data = new SQLInput("ID", bank, condition);
   std::string data;
@@ -57,7 +57,9 @@ void TransferToAnotherBank(std::string name_client_decrease,
   std::string id_client_decrease = GetIdValueByName(name_client_decrease, bank_client_decrease);
   std::string id_client_increase = GetIdValueByName(name_client_increase, bank_client_increase);
   std::string current = GetTheCurrentValueOfMoneyById(id_client_decrease, bank_client_decrease);
+
   current = std::to_string(std::stoi(current) - std::stoi(amount));
+
   OutputData *sql_out = new SQLOutput;
   InputData *sql_in = new SQLInput(money, "CENTRAL_BANK", "BANK = '" + bank_client_decrease + "'");
   std::string bank_client_money;
@@ -67,7 +69,6 @@ void TransferToAnotherBank(std::string name_client_decrease,
           + "'");
   sql_out->output("UPDATE CENTRAL_BANK SET MONEY = " + std::to_string(std::stoi(bank_client_money) - std::stoi(amount))
                       + " WHERE BANK = '" + bank_client_decrease + "'");
-
   sql_out->output(
       "INSERT INTO  CENTRAL_BANK_OPERATIONS (ID_SENDER, ID_RECIPIENT, BANK_SENDER, BANK_RECIPIENT,MONEY ) VALUES ('"
           + id_client_decrease + "', '"

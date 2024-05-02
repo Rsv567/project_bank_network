@@ -4,6 +4,7 @@
 #include "SQLStatement.h"
 #include "InputOutputData.h"
 #include "SQLconst.h"
+#include <memory>
 class CreaterPhysicalPerson;
 class PhysicalClient {
  private:

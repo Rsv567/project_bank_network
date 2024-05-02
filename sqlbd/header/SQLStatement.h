@@ -8,6 +8,7 @@
 #include <string>
 #include <iostream>
 #include<cstring>
+#include <memory>
 static int callback(void *NotUsed, int argc, char **argv, char **azColName);
 void SqlStatement(char *sql);
 void SqlCin(std::string sql);

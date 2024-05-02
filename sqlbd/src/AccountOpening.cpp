@@ -3,7 +3,6 @@
 
 void DebitAccount::CreateBankAccount(std::string id_client, std::string bank) {
   OutputData *cout_data = new SQLOutput;
-
   std::string sql = insert_into + bank + "_DEBIT (ID, MONEY )" +
   values + id_client + "',0); ";
   cout_data->output(sql);

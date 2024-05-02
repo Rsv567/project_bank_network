@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
 project(BankSystem)
-
 add_executable(BankSystem main.cpp)
 
 find_package(SFML 2.5.1 REQUIRED graphics audio window system)

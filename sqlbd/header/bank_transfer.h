@@ -1,5 +1,6 @@
 #ifndef SQLBD__INTERBANK_TRANSFER_H_
 #define SQLBD__INTERBANK_TRANSFER_H_
+#include <memory>
 #include "InputOutputData.h"
 #include "SQLconst.h"
 std::string GetIdValueByName(std::string name, std::string bank);

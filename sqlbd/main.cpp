@@ -5,18 +5,13 @@ int main() {
   CreateDataBase();
   bool exit = false;
   while (exit == false) {
-   InputData *output_data = new GraphicsInput("which bank you choose(SBERBANK, ALPHABANK, TINKOFF) ");
-
-
-
+   std::unique_ptr<InputData> output_data(new GraphicsInput("which_bank"));
     std::string bank;
     output_data->input(bank);
     std::cout<<bank;
-    output_data = new GraphicsInput("Hello. What kind of service do you want.(registration, open account, top up, withdraw, close account,\n \
-         transfer money to another account in our bank,transfer money to another account in other bank,\n cancel transaction within the bank,\
-         cancel transaction money to another account in other bank):\n");
+    std::unique_ptr<InputData> out_data (new GraphicsInput("hello"));
     std::string input_;
-    output_data->input(input_);
+    out_data->input(input_);
 std::cout<<input_;
     if (input_ == "registration") {
 
@@ -65,8 +60,8 @@ std::cout<<input_;
 
     }
     std::string session_continued;
-    output_data = new GraphicsInput("if you want to continue, write yes or no. ");
-    output_data->input(session_continued);
+    std::unique_ptr<InputData> out_datax( new GraphicsInput("continue"));
+    out_datax->input(session_continued);
     exit = (session_continued != "yes");
   }
 }
